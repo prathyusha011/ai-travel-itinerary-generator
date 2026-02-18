@@ -22,8 +22,10 @@ def generate_itinerary(destination, days, nights):
     response = chat_session.send_message(
         f"Create a detailed day-wise travel itinerary for {destination} "
         f"for {days} days and {nights} nights. Include places, food, and tips.",
-        request_options={"timeout": 30}
+        request_options={"timeout": 120}
     )
+    
+
 
     return response.text
 
